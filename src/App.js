@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navigation from './Components/Navigation'; // Import your Navigation component
+import Home from './pages/Home';
+import PortfolioPage from './pages/portfolio';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navigation /> {/* Add Navigation here, outside Routes but inside Router */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
+        {/* Add more routes here later, like <Route path="/about" element={<About />} /> */}
+      </Routes>
+    </Router>
   );
 }
 
