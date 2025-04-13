@@ -355,7 +355,7 @@ const PortfolioPage = () => {
                   Let's collaborate to create something exceptional together. Our team is ready to transform your ideas into reality.
                 </p>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-[#178582] hover:bg-[#178582]/90 text-white font-medium rounded-lg transition-all transform hover:translate-y-[-4px] hover:shadow-xl group"
                 >
                   Start a Project

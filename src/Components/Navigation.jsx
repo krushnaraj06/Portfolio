@@ -25,7 +25,6 @@ const Navigation = () => {
     { id:'#services', label: 'Services' },
     { id:'/portfolio', label: 'Portfolio' },
     { id:'/aboutus', label: 'About Us' },
-    { id:'/contact', label: 'Contact' }
   ];
   
   return (
@@ -80,7 +79,7 @@ const Navigation = () => {
             
             {/* CTA Button */}
             <a 
-              href="#contact"
+              href="/contact"
               className="ml-4 px-5 py-2 bg-[#178582] text-white rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 border border-transparent hover:border-[#BFA181]"
             >
               Get in Touch

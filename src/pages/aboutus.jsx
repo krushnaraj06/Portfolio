@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 // Import the image properly - adjust path as needed based on your project structure
 import animatedImage from '../assets/animated.webp';
+import anshimage from '../assets/ansh.png';
 
 const AboutUsPage = () => {
   const [isInView, setIsInView] = useState(false);
@@ -27,15 +28,15 @@ const AboutUsPage = () => {
   // Team members data
   const teamMembers = [
     {
-      name: "Alex Morgan",
-      role: "Creative Director & UI/UX Designer",
-      bio: "With over 5 years of experience in digital design, Alex brings a unique perspective to every project, focusing on creating intuitive and engaging user experiences.",
-      image: "/api/placeholder/400/400"
+      name: "Ansh Agarwal",
+      role: "Lead Developer",
+      bio: "Ansh has a passion for clean code and innovative solutions, with expertise in frontend and backend technologies that power modern web applications.",
+      image: anshimage
     },
     {
-      name: "Jamie Taylor",
-      role: "Lead Developer & Technical Strategist",
-      bio: "Jamie has a passion for clean code and innovative solutions, with expertise in frontend and backend technologies that power modern web applications.",
+      name: "Krushnaraj Bhosale",
+      role: "UI/UX Developer",
+      bio: "With over 1+ years of experience in digital design, Krushnaraj brings a unique perspective to every project, focusing on creating intuitive and engaging user experiences.",
       image: "/api/placeholder/400/400"
     }
   ];
@@ -119,7 +120,7 @@ const AboutUsPage = () => {
               
               <div className="flex space-x-4">
                 <a 
-                  href="#contact" 
+                  href="/contact" 
                   className="px-6 py-3 bg-[#178582] text-white rounded-lg transition-all hover:bg-[#178582]/90 transform hover:translate-y-[-4px] hover:shadow-lg inline-flex items-center"
                 >
                   Get in Touch
@@ -128,7 +129,7 @@ const AboutUsPage = () => {
                   </svg>
                 </a>
                 <a 
-                  href="#portfolio" 
+                  href="/portfolio" 
                   className="px-6 py-3 border border-[#BFA181] text-[#BFA181] rounded-lg transition-all hover:bg-[#BFA181]/10 transform hover:translate-y-[-4px]"
                 >
                   View Our Work
@@ -246,36 +247,35 @@ const AboutUsPage = () => {
           </div>
         </div>
         
-        {/* Team section */}
+        {/* Team section - MODIFIED FOR SMALLER CARDS */}
         <div className={`relative transition-all duration-1000 delay-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 ">
             <h2 className="text-4xl font-bold text-white mb-4">Meet The Team</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Small but mighty, our two-person team brings complementary skills and a shared passion for excellence.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
             {teamMembers.map((member, index) => (
               <div 
                 key={index}
                 className={`transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                 style={{ transitionDelay: `${index * 300 + 1000}ms` }}
               >
-                <div className="bg-[#0F2336]/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-[#178582]/10 hover:border-[#BFA181]/20 transition-all duration-500 hover:shadow-2xl group">
-                  <div className="aspect-square overflow-hidden">
+                <div className="bg-[#0F2336]/50 backdrop-blur-sm rounded-lg overflow-hidden border border-[#178582]/10 hover:border-[#BFA181]/20 transition-all duration-500 hover:shadow-lg group">
+                  <div className="h-40 overflow-hidden">
                     <img 
                       src={member.image} 
                       alt={member.name} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-[180px] h-[200px] transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A1828] to-transparent opacity-70"></div>
                   </div>
                   
-                  <div className="p-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
-                    <p className="text-[#BFA181] mb-4">{member.role}</p>
-                    <p className="text-gray-300">
+                  <div className="p-4">
+                    <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
+                    <p className="text-[#BFA181] text-sm mb-2">{member.role}</p>
+                    <p className="text-gray-300 text-sm line-clamp-3">
                       {member.bio}
                     </p>
                   </div>
@@ -294,6 +294,14 @@ const AboutUsPage = () => {
         }
         .animate-pulse-slow {
           animation: pulse-slow 10s ease-in-out infinite;
+        }
+        
+        /* Add line clamp for text truncation */
+        .line-clamp-3 {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
       `}</style>
     </section>

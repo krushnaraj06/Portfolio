@@ -52,20 +52,18 @@ const AnimatedFooter = () => {
   
   // Social media links
   const socialLinks = [
-    { name: 'GitHub', url: '#', icon: 'github' },
-    { name: 'LinkedIn', url: '#', icon: 'linkedin' },
-    { name: 'Twitter', url: '#', icon: 'twitter' },
-    { name: 'Instagram', url: '#', icon: 'instagram' },
-    { name: 'Dribbble', url: '#', icon: 'dribbble' }
+    { name: 'GitHub', url: 'https://github.com/anshagarwal-gif', icon: 'github' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/ansh-agarwal-7275b2249/', icon: 'linkedin' },
+    { name: 'Instagram', url: 'https://www.instagram.com/anshagarwal__007/?next=%2F&hl=en', icon: 'instagram' },
   ];
   
   // Navigation links
   const navLinks = [
     { name: 'Home', url: '/' },
-    { name: 'About', url: '#about' },
+    { name: 'About', url: '/aboutus' },
     { name: 'Services', url: '#services' },
     { name: 'Portfolio', url: '/portfolio' },
-    { name: 'Contact', url: '#contact' }
+    { name: 'Contact', url: '/contact' }
   ];
 
   // Function to render social icons
@@ -205,13 +203,13 @@ const AnimatedFooter = () => {
                 <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span>hello@designstudio.com</span>
+                <span>bhosalekrushnaraj@gmail.com</span>
               </div>
               <div className="flex items-center text-gray-300 hover:text-[#178582] transition-colors duration-300">
                 <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span>+1 (555) 123-4567</span>
+                <span>+91 7385410360</span>
               </div>
             </div>
           </div>
@@ -252,7 +250,7 @@ const AnimatedFooter = () => {
             </h3>
             
             <p className="text-gray-300 mb-6">
-              Subscribe to our newsletter to receive the latest updates and news.
+              Give Star to Our Git-Repository
             </p>
             
             <form className="relative mb-8">
@@ -300,7 +298,7 @@ const AnimatedFooter = () => {
         {/* Copyright & back to top */}
         <div className={`flex flex-col md:flex-row justify-between items-center transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '600ms' }}>
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} Design Studio. All rights reserved.
+            © {new Date().getFullYear()} BrocodeStudio. All rights reserved.
           </div>
           
           <div className="flex items-center">

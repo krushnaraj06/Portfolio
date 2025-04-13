@@ -140,14 +140,14 @@ const HeroSection = () => {
               className={`flex flex-wrap gap-4 pt-4 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${staggerItems[3].delay}ms` }}
             >
-              <button className="group px-8 py-4 bg-[#178582] text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg overflow-hidden relative">
+              <a href='/portfolio' className="group px-8 py-4 bg-[#178582] text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg overflow-hidden relative">
                 <span className="relative z-10">View Our Work</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-[#178582] to-teal-500 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
-              </button>
-              <button className="group px-8 py-4 border border-[#BFA181] text-[#BFA181] font-medium rounded-lg transition-all duration-300 relative overflow-hidden">
+              </a>
+              <a href='/contact' className="group px-8 py-4 border border-[#BFA181] text-[#BFA181] font-medium rounded-lg transition-all duration-300 relative overflow-hidden">
                 <span className="relative z-10 group-hover:text-white transition-colors duration-300">Contact Us</span>
                 <span className="absolute inset-0 bg-[#BFA181] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-              </button>
+              </a>
             </div>
           </div>
           

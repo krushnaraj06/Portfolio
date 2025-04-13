@@ -43,8 +43,8 @@ const ServicesSection = () => {
       title: "Web Development",
       icon: (
         <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke='#BFA181'>
-          <path d="M16 18L22 12L16 6" stroke="#178582" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M8 6L2 12L8 18" stroke="#178582" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M16 18L22 12L16 6" stroke="#BFA181" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M8 6L2 12L8 18" stroke="#BFA181" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M10 4L14 20" stroke="#BFA181" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
@@ -226,7 +226,7 @@ const ServicesSection = () => {
                 
                 <div className="pt-8">
                   <a 
-                    href="#contact" 
+                    href="/contact" 
                     className="inline-flex items-center px-6 py-3 bg-[#178582] hover:bg-[#178582]/90 text-white rounded-lg font-medium transition-all transform hover:scale-105 hover:shadow-lg group"
                   >
                     Discuss Your Project
@@ -322,7 +322,7 @@ const ServicesSection = () => {
               
               <div className="flex flex-wrap gap-4 justify-center">
                 <a 
-                  href="#contact" 
+                  href="/contact" 
                   className="px-8 py-4 bg-[#178582] text-white font-medium rounded-lg transition-all transform hover:scale-105 hover:shadow-lg group"
                 >
                   Start Your Project
@@ -336,7 +336,7 @@ const ServicesSection = () => {
                   </svg>
                 </a>
                 <a 
-                  href="#portfolio" 
+                  href="/portfolio" 
                   className="px-8 py-4 border border-[#BFA181] text-[#BFA181] font-medium rounded-lg transition-all hover:bg-[#BFA181]/10 transform hover:scale-105"
                 >
                   View Our Portfolio

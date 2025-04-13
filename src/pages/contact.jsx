@@ -177,7 +177,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <p className="text-[#BFA181] text-sm mb-1">Phone</p>
-                    <p className="font-medium text-white">+91 7249466063</p>
+                    <p className="font-medium text-white">+91 7385410360</p>
                   </div>
                 </div>
                 
@@ -189,7 +189,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <p className="text-[#BFA181] text-sm mb-1">Email</p>
-                    <p className="font-medium text-white">aspvisionsolutions@gmail.com</p>
+                    <p className="font-medium text-white">bhosalekrushnaraj@gmail.com <br/> anshagarwal.rishikesh@gmail.com</p>
                   </div>
                 </div>
                 
@@ -202,42 +202,11 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <p className="text-[#BFA181] text-sm mb-1">Location</p>
-                    <p className="font-medium text-white">Mumbai, Maharashtra, India</p>
+                    <p className="font-medium text-white">Loni Kalbhor, Maharashtra, India</p>
                   </div>
                 </div>
               </div>
               
-              <div className="mt-12">
-                <p className="text-xl font-medium mb-4 text-white">Follow Us</p>
-                <div className="flex space-x-4">
-                  {['twitter', 'facebook', 'linkedin'].map((social, index) => (
-                    <a 
-                      key={index} 
-                      href="#"
-                      className={`w-10 h-10 rounded-full bg-[#178582]/10 flex items-center justify-center hover:bg-[#178582]/30 transition-all duration-300 transform ${isInView ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`}
-                      style={{ transitionDelay: `${index * 100 + 500}ms` }}
-                    >
-                      {social === 'twitter' && (
-                        <svg className="w-5 h-5 text-[#178582]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                        </svg>
-                      )}
-                      {social === 'facebook' && (
-                        <svg className="w-5 h-5 text-[#178582]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                        </svg>
-                      )}
-                      {social === 'linkedin' && (
-                        <svg className="w-5 h-5 text-[#178582]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                          <rect x="2" y="9" width="4" height="12" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></rect>
-                          <circle cx="4" cy="4" r="2" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></circle>
-                        </svg>
-                      )}
-                    </a>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
           
@@ -404,7 +373,7 @@ const ContactPage = () => {
               
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="mailto:aspvisionsolutions@gmail.com" 
+                  href="mailto:bhosalekrushnaraj@gmail.com" 
                   className="px-6 py-3 bg-[#BFA181] text-white rounded-lg transition-all hover:bg-[#BFA181]/90 transform hover:translate-y-[-4px] hover:shadow-lg inline-flex items-center"
                 >
                   Email Us Directly
@@ -413,7 +382,7 @@ const ContactPage = () => {
                   </svg>
                 </a>
                 <a 
-                  href="tel:+917249466063" 
+                  href="tel:+917385410360" 
                   className="px-6 py-3 border border-[#178582] text-[#178582] rounded-lg transition-all hover:bg-[#178582]/10 transform hover:translate-y-[-4px] inline-flex items-center"
                 >
                   Call Us Now

@@ -213,28 +213,6 @@ const TechnologiesSection = () => {
             </div>
           </div>
         </div>
-        
-        {/* CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-300 text-lg mb-6">
-            Don't see the technology you need? We're adaptable and constantly expanding our expertise.
-          </p>
-          
-          <a
-            href="#contact"
-            className="inline-flex items-center px-8 py-4 bg-[#178582] hover:bg-[#178582]/90 text-white font-medium rounded-lg transition-all transform hover:scale-105 hover:shadow-lg group"
-          >
-            Discuss Your Project
-            <svg
-              className="ml-2 w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
-        </div>
       </div>
       
       {/* CSS for marquee animations */}
