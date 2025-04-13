@@ -1,5 +1,39 @@
 import React, { useState, useEffect } from 'react';
 
+// Import all the technology logos
+import css3Logo from '../Components/Technologylogo/css3.webp';
+import firebaseLogo from '../Components/Technologylogo/firebase.webp';
+import githubLogo from '../Components/Technologylogo/github.webp';
+import hostingerLogo from '../Components/Technologylogo/hostinger.png';
+import html5Logo from '../Components/Technologylogo/html5.jpg';
+import javaLogo from '../Components/Technologylogo/java.png';
+import javascriptLogo from '../Components/Technologylogo/javascript.webp';
+import mongodbLogo from '../Components/Technologylogo/mongodb.png';
+import mysqlLogo from '../Components/Technologylogo/mysql.png';
+import nodejsLogo from '../Components/Technologylogo/nodejs.jpg';
+import reactLogo from '../Components/Technologylogo/react.jpg';
+import tailwindLogo from '../Components/Technologylogo/tailwind.png';
+import vscodeLogo from '../Components/Technologylogo/vscode.png';
+// Add a placeholder for Railways
+
+
+// Map for logo imports - makes it easier to reference them by name
+const logoMap = {
+  css3: css3Logo,
+  firebase: firebaseLogo,
+  github: githubLogo,
+  hostinger: hostingerLogo,
+  html5: html5Logo,
+  java: javaLogo,
+  javascript: javascriptLogo,
+  mongodb: mongodbLogo,
+  mysql: mysqlLogo,
+  nodejs: nodejsLogo,
+  react: reactLogo,
+  tailwind: tailwindLogo,
+  vscode: vscodeLogo,
+
+};
 
 const TechnologiesSection = () => {
   const [isInView, setIsInView] = useState(false);
@@ -29,17 +63,16 @@ const TechnologiesSection = () => {
       techs: [
         { name: "HTML5", logo: "html5" },
         { name: "CSS3", logo: "css3" },
-        { name: "JavaScript", logo: "javascript" },
-        { name: "React", logo:  './public/logo192.png'},
-        { name: "Vue.js", logo: "vuejs" }
+        { name: "JavaScript",logo: "javascript" },
+        { name: "React", logo: "react"},
+        { name: "Tailwind",logo: "tailwind"}
       ]
     },
     {
       category: "Backend",
       techs: [
-        { name: "Node.js", logo: "nodejs" },
-        { name: "Python", logo: "python" },
-        { name: "PHP", logo: "php" },
+        { name: "Node.js", logo:"nodejs" },
+        { name: "Java", logo: "java" },
         { name: "MongoDB", logo: "mongodb" },
         { name: "MySQL", logo: "mysql" }
       ]
@@ -47,27 +80,38 @@ const TechnologiesSection = () => {
     {
       category: "Tools & Platforms",
       techs: [
-        { name: "Git", logo: "git" },
-        { name: "Docker", logo: "docker" },
-        { name: "AWS", logo: "aws" },
+        { name: "Git", logo: "github" },
         { name: "Firebase", logo: "firebase" },
-        { name: "VS Code", logo: "vscode" }
+        { name: "VS Code", logo: "vscode" },
+        { name: "Hostinger", logo: "hostinger"},
+        { name: "Railways", logo: "railways"}
       ]
     }
   ];
 
-  // For SVG placeholder as we don't have actual tech logos
-  const getPlaceholderLogo = (name) => {
-    // Creating a hash from the name to get consistent colors for the same name
-    const hash = name.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  // Use actual logos - fixed version
+  const getTechLogo = (logoKey) => {
+    // Safely convert to string and lowercase
+    const key = String(logoKey || '').toLowerCase();
     
-    // Use either turquoise or gold as base colors with variations
-    const baseColor = hash % 2 === 0 ? '#178582' : '#BFA181';
+    // Check if the key exists in the logoMap and the import was successful
+    if (key && logoMap[key]) {
+      return (
+        <div className="w-12 h-12 flex items-center justify-center rounded-lg overflow-hidden bg-white p-1">
+          <img 
+            src={logoMap[key]} 
+            alt={`${key} logo`} 
+            className="w-full h-full object-contain" 
+          />
+        </div>
+      );
+    }
     
+    // Fallback to placeholder if no logo is found
     return (
       <div className="w-12 h-12 flex items-center justify-center bg-[#0F2336] rounded-lg text-white">
-        <span style={{ color: baseColor }} className="font-bold text-xl">
-          {name.substring(0, 2).toUpperCase()}
+        <span className="font-bold text-xl text-[#178582]">
+          {String(logoKey || '').substring(0, 2).toUpperCase()}
         </span>
       </div>
     );
@@ -126,7 +170,7 @@ const TechnologiesSection = () => {
                       className="flex flex-col items-center transition-all duration-500 hover:scale-110"
                       style={{ transitionDelay: `${(catIndex * 5 + techIndex) * 100}ms` }}
                     >
-                      {getPlaceholderLogo(tech.name)}
+                      {getTechLogo(tech.logo)}
                       <span className="mt-2 text-sm text-gray-300">{tech.name}</span>
                     </div>
                   ))}
@@ -149,7 +193,7 @@ const TechnologiesSection = () => {
                 const tech = technologies[0].techs[i % technologies[0].techs.length];
                 return (
                   <div key={`row1-${i}`} className="flex-shrink-0 flex flex-col items-center">
-                    {getPlaceholderLogo(tech.name)}
+                    {getTechLogo(tech.logo)}
                   </div>
                 );
               })}
@@ -161,7 +205,7 @@ const TechnologiesSection = () => {
                 const tech = technologies[1].techs[i % technologies[1].techs.length];
                 return (
                   <div key={`row2-${i}`} className="flex-shrink-0 flex flex-col items-center">
-                    {getPlaceholderLogo(tech.name)}
+                    {getTechLogo(tech.logo)}
                   </div>
                 );
               })}
@@ -174,6 +218,7 @@ const TechnologiesSection = () => {
           <p className="text-gray-300 text-lg mb-6">
             Don't see the technology you need? We're adaptable and constantly expanding our expertise.
           </p>
+          
           <a
             href="#contact"
             className="inline-flex items-center px-8 py-4 bg-[#178582] hover:bg-[#178582]/90 text-white font-medium rounded-lg transition-all transform hover:scale-105 hover:shadow-lg group"
@@ -191,7 +236,7 @@ const TechnologiesSection = () => {
         </div>
       </div>
       
-      {/* CSS for marquee animations - to be added to your global styles */}
+      {/* CSS for marquee animations */}
       <style jsx>{`
         @keyframes marquee {
           0% { transform: translateX(0); }

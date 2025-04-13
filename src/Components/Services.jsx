@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import webd from '../assets/webd.webp';
+import uiux from '../assets/uiux.png';
 
 const ServicesSection = () => {
   const [activeService, setActiveService] = useState(0);
@@ -35,52 +37,22 @@ const ServicesSection = () => {
       description: "We create intuitive, engaging user experiences that delight your audience and achieve your business goals.",
       features: ["User Research", "Wireframing", "Prototyping", "Usability Testing", "Responsive Design"],
       color: "#178582",
-      image: "/api/placeholder/600/400"
+      image: webd
     },
     {
       title: "Web Development",
       icon: (
-        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke='#BFA181'>
           <path d="M16 18L22 12L16 6" stroke="#178582" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M8 6L2 12L8 18" stroke="#178582" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M10 4L14 20" stroke="#178582" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M10 4L14 20" stroke="#BFA181" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
       description: "We build fast, scalable, and reliable websites and web applications using modern technologies and best practices.",
       features: ["Frontend Development", "Backend Systems", "E-commerce Solutions", "CMS Integration", "Performance Optimization"],
       color: "#BFA181",
-      image: "/api/placeholder/600/400"
+      image: uiux
     },
-    {
-      title: "Brand Identity",
-      icon: (
-        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 7H22" stroke="#BFA181" strokeWidth="2" strokeLinecap="round"/>
-          <path d="M16 2L19 7L16 12" stroke="#BFA181" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M8 2L5 7L8 12" stroke="#BFA181" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M5 22L7 16L12 20L17 16L19 22" stroke="#BFA181" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
-      description: "We craft distinctive brand identities that communicate your values and connect with your target audience.",
-      features: ["Logo Design", "Visual Identity", "Brand Strategy", "Style Guides", "Marketing Collateral"],
-      color: "#178582",
-      image: "/api/placeholder/600/400"
-    },
-    {
-      title: "Digital Strategy",
-      icon: (
-        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L19 6.5V17.5L12 22L5 17.5V6.5L12 2Z" stroke="#178582" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M12 22V12" stroke="#178582" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M12 12L19 6.5" stroke="#178582" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M12 12L5 6.5" stroke="#178582" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
-      description: "We develop comprehensive digital strategies that align with your business objectives and drive measurable results.",
-      features: ["Market Research", "Competitor Analysis", "SEO Optimization", "Content Strategy", "Analytics & Reporting"],
-      color: "#BFA181",
-      image: "/api/placeholder/600/400"
-    }
   ];
   
   // Auto-rotate through services
@@ -189,7 +161,7 @@ const ServicesSection = () => {
                     </div>
                   </div>
                   <div className="text-white text-3xl font-bold">
-                    95<span className="text-[#BFA181]">%</span>
+                    100<span className="text-[#BFA181]">%</span>
                   </div>
                 </div>
               </div>

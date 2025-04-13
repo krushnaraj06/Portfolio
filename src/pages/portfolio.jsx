@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import wadhwaevents from '../assets/wadhwaevents.png';
 
 const PortfolioPage = () => {
   const [isInView, setIsInView] = useState(false);
@@ -17,7 +18,7 @@ const PortfolioPage = () => {
       description: "A comprehensive event management platform featuring seamless booking, interactive galleries, and dedicated service showcases.",
       category: "Web Development",
       status: "completed",
-      image: "/api/placeholder/600/400",
+      image:wadhwaevents,
       technologies: ["React", "Node.js", "Tailwind CSS"],
       url: "https://wadhwaevents.com/",
       features: [
@@ -145,11 +146,7 @@ const PortfolioPage = () => {
     { id: 'completed', label: 'Completed' },
     { id: 'in-progress', label: 'In Progress' },
     { id: 'Web Development', label: 'Web Development' },
-    { id: 'E-commerce', label: 'E-commerce' },
     { id: 'UI/UX Design', label: 'UI/UX Design' },
-    { id: 'SaaS', label: 'SaaS' },
-    { id: 'Mobile App', label: 'Mobile App' },
-    { id: 'FinTech', label: 'FinTech' }
   ];
   
   // Update cursor position for magnetic effect
@@ -218,26 +215,16 @@ const PortfolioPage = () => {
       }
     }, [cursorPosition]);
     
-    return (
-      <div 
-        ref={cursorRef} 
-        className={`fixed w-20 h-20 rounded-full pointer-events-none mix-blend-difference z-50 transition-all duration-100 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center ${
-          hoveredProject ? 'bg-white scale-100 opacity-100' : 'bg-transparent scale-0 opacity-0'
-        }`}
-      >
-        <span className="text-black font-bold text-sm">VIEW</span>
-      </div>
-    );
   };
 
   return (
     <section id="portfolio" className="py-24 bg-[#0A1828] overflow-hidden">
       <CustomCursor />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative bgimg-{50px}">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-40 right-0 w-96 h-96 rounded-full bg-[#178582]/5 blur-3xl"></div>
+          <div className="absolute top-40 right-0 w-96 h-96 rounded-full bg-[#178582]/5 blur-2xl"></div>
           <div className="absolute bottom-20 left-10 w-80 h-80 rounded-full bg-[#BFA181]/5 blur-3xl"></div>
           <div className="absolute top-1/4 left-1/3 w-64 h-64 rounded-full border border-[#178582]/10 animate-pulse-slow"></div>
           <div className="absolute top-3/4 right-1/4 w-32 h-32 backdrop-blur-sm bg-[#BFA181]/5 rounded-full animate-float"></div>
@@ -262,7 +249,7 @@ const PortfolioPage = () => {
             </div>
             
             {/* Stats */}
-            <div className="flex space-x-6 md:space-x-10 text-right">
+            <div className="flex space-x-4 md:space-x-10 text-right">
               <div>
                 <span className="block text-4xl font-bold text-[#BFA181]">{projects.length}</span>
                 <span className="text-gray-400 text-sm">Projects</span>
@@ -306,7 +293,7 @@ const PortfolioPage = () => {
         </div>
         
        {/* Projects showcase with vertical layout and increased height */}
-<div ref={projectsRef} className="flex flex-col gap-8">
+<div ref={projectsRef} className="flex flex-col gap-8 ">
   {filteredProjects.map((project, index) => {
     return (
       <div 
@@ -332,7 +319,6 @@ const PortfolioPage = () => {
             <div 
               className="absolute inset-0 transition-opacity duration-500"
               style={{ 
-                background: `linear-gradient(210deg, ${project.color}22 0%, ${project.color}88 100%)`,
                 opacity: hoveredProject === project.id ? '0.9' : '0.8',
               }}
             ></div>
@@ -460,7 +446,7 @@ const PortfolioPage = () => {
     onClick={closeProjectDetails}
   >
     <div 
-      className="bg-[#0F2336] rounded-2xl w-full max-w-5xl overflow-hidden relative my-4"
+      className="bg-[#0F2336] rounded-2xl w-full max-w-5xl overflow-hidden relative my-4 "
       onClick={(e) => e.stopPropagation()}
     >
       {/* Close button - positioned for better visibility */}
@@ -510,7 +496,7 @@ const PortfolioPage = () => {
       </div>
       
       {/* Modal content - Improved structure and spacing */}
-      <div className="p-6 md:p-8">
+      <div className="p-3 md:p-4" >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <div className="mb-8">

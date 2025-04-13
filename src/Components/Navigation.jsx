@@ -24,8 +24,8 @@ const Navigation = () => {
     { id:'/', label: 'Home' },
     { id:'#services', label: 'Services' },
     { id:'/portfolio', label: 'Portfolio' },
-    { id:'about', label: 'About Us' },
-    { id:'contact', label: 'Contact' }
+    { id:'/aboutus', label: 'About Us' },
+    { id:'/contact', label: 'Contact' }
   ];
   
   return (
@@ -46,11 +46,11 @@ const Navigation = () => {
                 <div className="absolute inset-0 bg-[#178582] rounded-lg rotate-45 transform hover:rotate-0 transition-transform duration-300"></div>
                 <div className="absolute inset-0 border-2 border-[#BFA181] rounded-lg -rotate-45 transform hover:rotate-0 transition-transform duration-300 delay-75"></div>
                 <div className="absolute inset-0 flex items-center justify-center text-white font-bold">
-                  <span className="transform -rotate-45 hover:rotate-0 transition-transform duration-300">DS</span>
+                  <span className="transform -rotate-45 hover:rotate-0 transition-transform duration-300">BS</span>
                 </div>
               </div>
               <span className="text-white font-semibold text-xl tracking-tight">
-                <span className="text-[#178582]">Design</span>
+                <span className="text-[#178582]">Brocode</span>
                 <span className="text-[#BFA181]">Studio</span>
               </span>
             </a>

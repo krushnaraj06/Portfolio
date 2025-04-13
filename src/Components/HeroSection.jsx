@@ -220,14 +220,14 @@ const HeroSection = () => {
               className="absolute -bottom-6 right-6 bg-[#0A1828] text-[#BFA181] px-6 py-3 rounded-lg shadow-lg border border-[#BFA181]/20 transform rotate-3 hover:rotate-0 transition-all hover:scale-110 duration-300 animate-float-slow"
               style={{animationDuration: '6s'}}
             >
-              <span className="font-semibold">Est. 2023</span>
+              <span className="font-semibold">Est. 2024</span>
             </div>
           </div>
         </div>
         
         {/* Scroll indicator with pulse animation */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50 animate-bounce-slow">
-          <span className="text-sm">Scroll to explore</span>
+          
           <div className="w-px h-16 bg-gradient-to-b from-white/0 to-white/50"></div>
           <div className="w-6 h-6 flex items-center justify-center">
             <svg className="animate-bounce" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
