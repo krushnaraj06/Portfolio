@@ -14,9 +14,27 @@ const PortfolioPage = () => {
   const projects = [
     {
       id: 1,
+      title: "JPEL Extrusion Tech",
+      description: "A sophisticated web application with advanced features for data visualization and interactive user dashboards.",
+      category: "Web Development",
+      status: "completed",
+      image: "/api/placeholder/600/400",
+      technologies: ["React", "D3.js", "Firebase", "Material UI"],
+      url: "https://jpel2.vercel.app/",
+      features: [
+        "Complex data visualization components",
+        "Real-time data updates",
+        "User authentication and profiles",
+        "Advanced filtering and search capabilities",
+        "Responsive layout for all screen sizes"
+      ],
+      color: "#11C5C6"
+    },
+    {
+      id: 2,
       title: "Wadhwa Events",
       description: "A comprehensive event management platform featuring seamless booking, interactive galleries, and dedicated service showcases.",
-      category: "Web Development",
+      category:  "UI/UX Design",
       status: "completed",
       image:wadhwaevents,
       technologies: ["React", "Node.js", "Tailwind CSS"],
@@ -30,10 +48,10 @@ const PortfolioPage = () => {
       color: "#E83A3A"
     },
     {
-      id: 2,
+      id: 3,
       title: "Mobikoo",
       description: "An innovative e-commerce platform for mobile accessories with advanced product filtering and a seamless checkout experience.",
-      category: "E-commerce",
+      category: "Web Development",
       status: "completed",
       image: "/api/placeholder/600/400",
       technologies: ["React", "Next.js", "MongoDB", "Stripe"],
@@ -48,7 +66,7 @@ const PortfolioPage = () => {
       color: "#4D61FC"
     },
     {
-      id: 3,
+      id: 4,
       title: "SPS Portfolio",
       description: "A sleek, modern portfolio website showcasing professional services and projects with elegant animations and interactive elements.",
       category: "UI/UX Design",
@@ -64,80 +82,6 @@ const PortfolioPage = () => {
       ],
       color: "#F7B733"
     },
-    {
-      id: 4,
-      title: "JPEL 2.0",
-      description: "A sophisticated web application with advanced features for data visualization and interactive user dashboards.",
-      category: "Web Application",
-      status: "completed",
-      image: "/api/placeholder/600/400",
-      technologies: ["React", "D3.js", "Firebase", "Material UI"],
-      url: "https://jpel2.vercel.app/",
-      features: [
-        "Complex data visualization components",
-        "Real-time data updates",
-        "User authentication and profiles",
-        "Advanced filtering and search capabilities",
-        "Responsive layout for all screen sizes"
-      ],
-      color: "#11C5C6"
-    },
-    {
-      id: 5,
-      title: "Creative Agency Platform",
-      description: "A comprehensive platform for creative agencies to manage clients, projects, and team collaboration.",
-      category: "SaaS",
-      status: "completed",
-      image: "/api/placeholder/600/400",
-      technologies: ["React", "Node.js", "Express", "MongoDB"],
-      url: "#",
-      features: [
-        "Project management dashboard",
-        "Client portal with separate access",
-        "Team collaboration tools",
-        "Resource allocation",
-        "Time tracking and reporting"
-      ],
-      color: "#9B51E0"
-    },
-    {
-      id: 6,
-      title: "Health & Fitness App",
-      description: "An innovative mobile-first application for health tracking, workout planning, and nutrition guidance.",
-      category: "Mobile App",
-      status: "in-progress",
-      image: "/api/placeholder/600/400",
-      technologies: ["React Native", "Firebase", "Node.js", "Express"],
-      url: "#",
-      features: [
-        "Personalized workout plans",
-        "Nutrition tracking and meal suggestions",
-        "Progress visualization",
-        "Community challenges and support",
-        "Integration with health devices"
-      ],
-      completion: 65,
-      color: "#2DCA72"
-    },
-    {
-      id: 7,
-      title: "Financial Dashboard",
-      description: "A powerful financial analytics platform with real-time data visualization and predictive modeling.",
-      category: "FinTech",
-      status: "in-progress",
-      image: "/api/placeholder/600/400",
-      technologies: ["React", "D3.js", "Node.js", "PostgreSQL"],
-      url: "#",
-      features: [
-        "Real-time financial data tracking",
-        "Predictive analytics modeling",
-        "Custom report generation",
-        "Multi-user access with role-based permissions",
-        "Data export and integration capabilities"
-      ],
-      completion: 40,
-      color: "#F2994A"
-    }
   ];
   
   // Filter categories
@@ -264,7 +208,7 @@ const PortfolioPage = () => {
                 <span className="block text-4xl font-bold text-[#BFA181]">
                   {projects.filter(p => p.status === 'in-progress').length}
                 </span>
-                <span className="text-gray-400 text-sm">In Progress</span>
+                <span className="text-gray-400 text-sm">Progress</span>
               </div>
             </div>
           </div>
@@ -460,17 +404,16 @@ const PortfolioPage = () => {
       </button>
 
       {/* Modal header with image */}
-      <div className="relative h-64 md:h-80 overflow-hidden">
+      <div className="relative h-64 md:h-80 overflow-hidden ">
         <div className="absolute inset-0">
           <img 
             src={selectedProject.image} 
             alt={selectedProject.title} 
-            className="w-full h-full object-cover"
+            className="w-full h-[600px] object-cover mt-[10px]"
           />
           <div 
             className="absolute inset-0" 
             style={{ 
-              background: `linear-gradient(to bottom, ${selectedProject.color}22, ${selectedProject.color}88, #0F2336)` 
             }}
           ></div>
         </div>

@@ -14,6 +14,7 @@ import nodejsLogo from '../Components/Technologylogo/nodejs.jpg';
 import reactLogo from '../Components/Technologylogo/react.jpg';
 import tailwindLogo from '../Components/Technologylogo/tailwind.png';
 import vscodeLogo from '../Components/Technologylogo/vscode.png';
+import railwayslogo from '../Components/Technologylogo/railways.png';
 // Add a placeholder for Railways
 
 
@@ -32,7 +33,7 @@ const logoMap = {
   react: reactLogo,
   tailwind: tailwindLogo,
   vscode: vscodeLogo,
-
+  railways: railwayslogo
 };
 
 const TechnologiesSection = () => {
