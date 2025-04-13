@@ -142,7 +142,7 @@ const Navigation = () => {
           {/* Mobile CTA */}
           <div className="pt-2">
             <a
-              href="#contact"
+              href="/contact"
               className="block w-full text-center px-5 py-3 bg-[#178582] text-white rounded-lg shadow-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >

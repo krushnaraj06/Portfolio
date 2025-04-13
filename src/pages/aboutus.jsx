@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-// Import the image properly - adjust path as needed based on your project structure
+// Images need to be imported correctly or use relative paths
+// Using placeholder paths since we don't know the exact structure
 import animatedImage from '../assets/animated.webp';
-import anshimage from '../assets/ansh.png';
+import anshImage from '../assets/ansh.png';
 
 const AboutUsPage = () => {
   const [isInView, setIsInView] = useState(false);
@@ -31,7 +32,7 @@ const AboutUsPage = () => {
       name: "Ansh Agarwal",
       role: "Lead Developer",
       bio: "Ansh has a passion for clean code and innovative solutions, with expertise in frontend and backend technologies that power modern web applications.",
-      image: anshimage
+      image: anshImage
     },
     {
       name: "Krushnaraj Bhosale",
@@ -95,7 +96,7 @@ const AboutUsPage = () => {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
               <div className="inline-block mb-4">
-                <span className="inline-block py-1 px-3 bg-[#178582]/10 rounded-full text-[#178582] text-sm font-medium">
+                <span className="inline-block py-1 px-3 bg-[#178582]/10 rounded-full text-[#178582] text-sm font-medium mt-[55px]">
                   About Us
                 </span>
               </div>
@@ -108,12 +109,12 @@ const AboutUsPage = () => {
               
               {/* Stats */}
               <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="bg-[#0A1828]/50 backdrop-blur-sm rounded-xl p-6 border border-[#178582]/10 transition-transform hover:transform hover:scale-105">
-                  <div className="text-3xl font-bold text-[#BFA181] mb-1">2+</div>
+                <div className="bg-[#0A1828]/50 backdrop-blur-sm rounded-xl p-6 border border-[#178582]/10 transition-transform hover:scale-105">
+                  <div className="text-3xl font-bold text-[#BFA181] mb-1">1+</div>
                   <div className="text-gray-400">Years Experience</div>
                 </div>
-                <div className="bg-[#0A1828]/50 backdrop-blur-sm rounded-xl p-6 border border-[#178582]/10 transition-transform hover:transform hover:scale-105">
-                  <div className="text-3xl font-bold text-[#BFA181] mb-1">50+</div>
+                <div className="bg-[#0A1828]/50 backdrop-blur-sm rounded-xl p-6 border border-[#178582]/10 transition-transform hover:scale-105">
+                  <div className="text-3xl font-bold text-[#BFA181] mb-1">5+</div>
                   <div className="text-gray-400">Projects Completed</div>
                 </div>
               </div>
@@ -121,7 +122,7 @@ const AboutUsPage = () => {
               <div className="flex space-x-4">
                 <a 
                   href="/contact" 
-                  className="px-6 py-3 bg-[#178582] text-white rounded-lg transition-all hover:bg-[#178582]/90 transform hover:translate-y-[-4px] hover:shadow-lg inline-flex items-center"
+                  className="px-6 py-3 bg-[#178582] text-white rounded-lg transition-all hover:bg-[#178582]/90 hover:-translate-y-1 hover:shadow-lg inline-flex items-center"
                 >
                   Get in Touch
                   <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -130,7 +131,7 @@ const AboutUsPage = () => {
                 </a>
                 <a 
                   href="/portfolio" 
-                  className="px-6 py-3 border border-[#BFA181] text-[#BFA181] rounded-lg transition-all hover:bg-[#BFA181]/10 transform hover:translate-y-[-4px]"
+                  className="px-6 py-3 border border-[#BFA181] text-[#BFA181] rounded-lg transition-all hover:bg-[#BFA181]/10 hover:-translate-y-1"
                 >
                   View Our Work
                 </a>
@@ -141,7 +142,7 @@ const AboutUsPage = () => {
               <div className="relative">
                 {/* Main image with animated border */}
                 <div 
-                  className="rounded-2xl overflow-hidden border-2 border-[#178582]/30 shadow-2xl transform rotate-2 transition-all duration-500 hover:rotate-0 hover:scale-105"
+                  className="rounded-2xl overflow-hidden border-2 border-[#178582]/30 shadow-2xl transition-all duration-500 hover:rotate-0 hover:scale-105"
                   style={{ 
                     transform: `rotate(2deg) translate(${mousePosition.x * -0.01}px, ${mousePosition.y * -0.01}px)`,
                     transition: 'transform 0.5s ease-out'
@@ -246,7 +247,7 @@ const AboutUsPage = () => {
             ))}
           </div>
         </div>
-        
+
         {/* Team section - MODIFIED FOR SMALLER CARDS */}
         <div className={`relative transition-all duration-1000 delay-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center mb-12 ">
@@ -255,29 +256,77 @@ const AboutUsPage = () => {
               Small but mighty, our two-person team brings complementary skills and a shared passion for excellence.
             </p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
+          </div>
+        
+        {/* Team Members Grid */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {teamMembers.map((member, index) => (
               <div 
                 key={index}
-                className={`transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                style={{ transitionDelay: `${index * 300 + 1000}ms` }}
+                className={`transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                style={{ transitionDelay: `${index * 200 + 400}ms` }}
               >
-                <div className="bg-[#0F2336]/50 backdrop-blur-sm rounded-lg overflow-hidden border border-[#178582]/10 hover:border-[#BFA181]/20 transition-all duration-500 hover:shadow-lg group">
-                  <div className="h-40 overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name} 
-                      className="w-[180px] h-[200px] transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
+                <div className="group relative h-full">
+                  {/* Card background with gradient border effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#178582]/30 via-[#BFA181]/20 to-transparent rounded-2xl transform group-hover:scale-105 transition-transform duration-700 opacity-0 group-hover:opacity-100"></div>
                   
-                  <div className="p-4">
-                    <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
-                    <p className="text-[#BFA181] text-sm mb-2">{member.role}</p>
-                    <p className="text-gray-300 text-sm line-clamp-3">
-                      {member.bio}
-                    </p>
+                  <div className="relative bg-[#0A1828]/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-[#178582]/20 group-hover:border-[#BFA181]/30 transition-all duration-500 h-full">
+                    {/* Top decorative accent */}
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#178582] to-[#BFA181] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+                    
+                    <div className="flex flex-col md:flex-row items-center p-6 md:p-8 h-full">
+                      {/* Image container with mask and animations */}
+                      <div className="w-40 h-40 md:w-48 md:h-48 mb-6 md:mb-0 relative overflow-hidden rounded-full mx-auto md:mx-0 flex-shrink-0">
+                        {/* Animated gradient border */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#178582] to-[#BFA181] rounded-full p-1 animate-spin-slow"></div>
+                        
+                        {/* Image mask */}
+                        <div className="absolute inset-1 bg-[#0A1828] rounded-full overflow-hidden flex items-center justify-center">
+                          {/* Image with perfect fitting and hover effect */}
+                          <div className="w-full h-full overflow-hidden rounded-full transform group-hover:scale-110 transition-all duration-700 bg-center bg-cover relative">
+                            <img 
+                              src={member.image} 
+                              alt={member.name} 
+                              className="w-full h-full object-cover object-center absolute inset-0"
+                              loading="lazy"
+                              style={{ objectPosition: 'center top' }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="md:ml-8 text-center md:text-left flex-grow">
+                        <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-[#BFA181] transition-colors duration-300">
+                          {member.name}
+                        </h3>
+                        <p className="text-[#178582] font-medium mb-4">{member.role}</p>
+                        <p className="text-gray-300 leading-relaxed">
+                          {member.bio}
+                        </p>
+                        
+                        {/* Social icons */}
+                        <div className="mt-6 flex justify-center md:justify-start space-x-4">
+                          {[
+                            { name: 'github', icon: 'M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z' },
+                            { name: 'linkedin', icon: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z' },
+                            { name: 'twitter', icon: 'M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z' }
+                          ].map((social, idx) => (
+                            <a 
+                              key={idx}
+                              href="#" 
+                              className="w-10 h-10 rounded-full bg-[#0F2336] flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#178582] transform hover:scale-110 transition-all duration-300"
+                              aria-label={`${member.name}'s ${social.name}`}
+                            >
+                              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                <path d={social.icon} />
+                              </svg>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -285,23 +334,23 @@ const AboutUsPage = () => {
           </div>
         </div>
       </div>
-      
-      {/* Animation styles */}
+
+      {/* Custom animations */}
       <style jsx>{`
+        @keyframes spin-slow {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+          animation: spin-slow 20s linear infinite;
+        }
+        
         @keyframes pulse-slow {
           0%, 100% { transform: scale(1); opacity: 0.3; }
           50% { transform: scale(1.05); opacity: 0.1; }
         }
         .animate-pulse-slow {
           animation: pulse-slow 10s ease-in-out infinite;
-        }
-        
-        /* Add line clamp for text truncation */
-        .line-clamp-3 {
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
         }
       `}</style>
     </section>

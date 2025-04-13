@@ -138,7 +138,7 @@ const ContactPage = () => {
           <div className="inline-block mb-3">
           </div>
           <div className="relative inline-block">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 mt-[60px]">
               Get in Touch <span className="text-[#BFA181]">with Us</span>
             </h2>
             <div className="absolute bottom-2 left-0 w-full h-1 bg-[#178582] animate-expand-underline"></div>
