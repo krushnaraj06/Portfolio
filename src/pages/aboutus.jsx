@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 // Using placeholder paths since we don't know the exact structure
 import animatedImage from '../assets/animated.webp';
 import anshImage from '../assets/ansh.png';
+import krishnaImage from '../assets/krishna.png';
 
 const AboutUsPage = () => {
   const [isInView, setIsInView] = useState(false);
@@ -31,14 +32,14 @@ const AboutUsPage = () => {
     {
       name: "Ansh Agarwal",
       role: "Lead Developer",
-      bio: "Ansh has a passion for clean code and innovative solutions, with expertise in frontend and backend technologies that power modern web applications.",
+      bio: "Ansh has a passion for clean code and innovative solutions, with expertise inbackend technologies that power modern web applications.",
       image: anshImage
     },
     {
       name: "Krushnaraj Bhosale",
       role: "UI/UX Developer",
-      bio: "With over 1+ years of experience in digital design, Krushnaraj brings a unique perspective to every project, focusing on creating intuitive and engaging user experiences.",
-      image: "/api/placeholder/400/400"
+      bio: " Krushnaraj brings a unique perspective to every project and has a Expertise in frontend, focusing on creating intuitive and engaging user experiences.",
+      image: krishnaImage
     }
   ];
   
