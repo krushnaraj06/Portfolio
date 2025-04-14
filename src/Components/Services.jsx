@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import webd from '../assets/webd.webp';
 import uiux from '../assets/uiux.png';
 
+
 const ServicesSection = () => {
   const [activeService, setActiveService] = useState(0);
   const [isInView, setIsInView] = useState(false);

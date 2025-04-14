@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,13 +19,66 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  // Navigation links
+  // Navigation links - full list for desktop
   const navLinks = [
-    { id:'/', label: 'Home' },
-    { id:'#services', label: 'Services' },
-    { id:'/portfolio', label: 'Portfolio' },
-    { id:'/aboutus', label: 'About Us' },
+    { id: '/', label: 'Home' },
+    { id: '#services', label: 'Services' },
+    { id: '/portfolio', label: 'Portfolio' },
+    { id: '/aboutus', label: 'About Us' },
   ];
+  
+  // Mobile navigation links - without services
+  const mobileNavLinks = navLinks.filter(link => link.id !== '#services');
+  
+  // Scroll to section handler
+  const scrollToSection = useCallback((sectionId) => {
+    // Remove the # if present
+    const id = sectionId.replace('#', '');
+    
+    // Try multiple selector approaches - sometimes the ID might be on different elements
+    const section = 
+      document.getElementById(id) || 
+      document.querySelector(`[id="${id}"]`) || 
+      document.querySelector(`[data-section="${id}"]`) ||
+      document.querySelector(`section[data-id="${id}"]`);
+    
+    if (section) {
+      // Calculate position with offset for header
+      const headerOffset = 80;
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+      // Scroll to the position
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      
+      // For mobile, close the menu after navigating
+      setIsMobileMenuOpen(false);
+      return true;
+    }
+    
+    // If section not found, try setting window.location.hash as fallback
+    window.location.hash = id;
+    setIsMobileMenuOpen(false);
+    return false;
+  }, []);
+  
+  // Handle link click with proper navigation logic
+  const handleLinkClick = useCallback((e, link) => {
+    // Update active state
+    setActiveLink(link.id);
+    
+    // If it's a hash link, prevent default and handle custom scrolling
+    if (link.id.startsWith('#')) {
+      e.preventDefault();
+      scrollToSection(link.id);
+    } else {
+      // For regular links, close mobile menu but allow default navigation
+      setIsMobileMenuOpen(false);
+    }
+  }, [scrollToSection]);
   
   return (
     <nav 
@@ -55,18 +108,18 @@ const Navigation = () => {
             </a>
           </div>
           
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - includes Services */}
           <div className="hidden md:flex md:items-center md:space-x-8">
             {navLinks.map(link => (
               <a 
                 key={link.id}
-                href={`${link.id}`}
+                href={link.id}
                 className={`relative px-1 py-2 text-sm font-medium transition-colors duration-300 group ${
                   activeLink === link.id 
                     ? 'text-[#178582]' 
                     : 'text-gray-300 hover:text-white'
                 }`}
-                onClick={() => setActiveLink(link.id)}
+                onClick={(e) => handleLinkClick(e, link)}
               >
                 {link.label}
                 <span 
@@ -91,6 +144,7 @@ const Navigation = () => {
             <button 
               className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-expanded={isMobileMenuOpen}
             >
               <div className="w-6 h-6 relative">
                 <span 
@@ -114,26 +168,23 @@ const Navigation = () => {
         </div>
       </div>
       
-      {/* Mobile Menu */}
+      {/* Mobile Menu - without Services */}
       <div 
         className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="px-4 pt-2 pb-4 bg-[#0A1828]/95 backdrop-blur-md space-y-1 sm:px-3 border-t border-[#178582]/20">
-          {navLinks.map(link => (
+          {mobileNavLinks.map(link => (
             <a
               key={link.id}
-              href={`${link.id}`}
+              href={link.id}
               className={`block px-3 py-3 rounded-md text-base font-medium transition-colors duration-200 ${
                 activeLink === link.id
                   ? 'text-[#178582] bg-[#178582]/10'
                   : 'text-gray-300 hover:text-white hover:bg-[#178582]/5'
               }`}
-              onClick={() => {
-                setActiveLink(link.id);
-                setIsMobileMenuOpen(false);
-              }}
+              onClick={(e) => handleLinkClick(e, link)}
             >
               {link.label}
             </a>
