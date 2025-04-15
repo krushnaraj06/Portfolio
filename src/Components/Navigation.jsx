@@ -22,13 +22,13 @@ const Navigation = () => {
   // Navigation links - full list for desktop
   const navLinks = [
     { id: '/', label: 'Home' },
-    { id: '#services', label: 'Services' },
+    { id: '/Home#services', label: 'Services' },
     { id: '/portfolio', label: 'Portfolio' },
     { id: '/aboutus', label: 'About Us' },
   ];
   
-  // Mobile navigation links - without services
-  const mobileNavLinks = navLinks.filter(link => link.id !== '#services');
+  // Mobile navigation links - including services now
+  const mobileNavLinks = navLinks;
   
   // Scroll to section handler
   const scrollToSection = useCallback((sectionId) => {
@@ -168,7 +168,7 @@ const Navigation = () => {
         </div>
       </div>
       
-      {/* Mobile Menu - without Services */}
+      {/* Mobile Menu - now including Services */}
       <div 
         className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'

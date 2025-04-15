@@ -61,7 +61,7 @@ const AnimatedFooter = () => {
   const navLinks = [
     { name: 'Home', url: '/' },
     { name: 'About', url: '/aboutus' },
-    { name: 'Services', url: '#services' },
+    { name: 'Services', url: '/Home#services' },
     { name: 'Portfolio', url: '/portfolio' },
     { name: 'Contact', url: '/contact' }
   ];

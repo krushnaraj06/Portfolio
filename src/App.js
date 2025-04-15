@@ -14,6 +14,7 @@ function App() {
       <Navigation /> {/* Add Navigation here, outside Routes but inside Router */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/aboutus" element={<AboutUsPage />} />
         <Route path="/contact" element={<ContactPage />} />
