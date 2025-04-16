@@ -15,7 +15,7 @@ const AboutUsPage = () => {
   const sections = {
     story: {
       title: "Our Story",
-      content: "Founded in 2023, DesignStudio began as a collaboration between two passionate individuals with complementary skills in design and development. What started as freelance projects quickly evolved into a dedicated studio focused on delivering exceptional digital experiences."
+      content: "Founded in 2023, DesignStudio began as a collaboration between Four passionate individuals with complementary skills in design and development. What started as freelance projects quickly evolved into a dedicated studio focused on delivering exceptional digital experiences."
     },
     mission: {
       title: "Our Mission",
@@ -247,7 +247,7 @@ const AboutUsPage = () => {
           <div className="text-center mb-12 ">
             <h2 className="text-4xl font-bold text-white mb-4">Meet The Team</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Small but mighty, our two-person team brings complementary skills and a shared passion for excellence.
+              Small but mighty, our Four-person team brings complementary skills and a shared passion for excellence.
             </p>
           </div>
           </div>
