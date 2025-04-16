@@ -36,7 +36,6 @@ const AboutUsPage = () => {
       image: krishnaImage
     },
   ];
-  
   // Detect when section is in view
   useEffect(() => {
     const handleScroll = () => {

@@ -189,7 +189,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <p className="text-[#BFA181] text-sm mb-1">Email</p>
-                    <p className="font-medium text-white">bhosalekrushnaraj@gmail.com <br/> anshagarwal.rishikesh@gmail.com</p>
+                    <p className="font-medium text-white">bhosalekrushnaraj@gmail.com <br/> anshagarwal.rishikesh@gmail.com <br />devsagani19@gmail.com</p>
                   </div>
                 </div>
                 

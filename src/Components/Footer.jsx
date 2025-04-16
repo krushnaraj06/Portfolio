@@ -195,7 +195,7 @@ const AnimatedFooter = () => {
             
             <p className="text-gray-300 mb-6">
               We create stunning digital experiences that captivate audiences and drive business growth. 
-              Our two-person team brings a unique blend of creativity and technical expertise.
+              Our team brings a unique blend of creativity and technical expertise.
             </p>
             
             <div className="space-y-3">

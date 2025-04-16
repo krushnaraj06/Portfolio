@@ -110,7 +110,7 @@ const HeroSection = () => {
             >
               <span className="text-lg font-light text-[#178582] tracking-wide pb-2 relative overflow-hidden inline-block">
                 <span className="relative z-10 animate-shimmer bg-gradient-to-r from-[#178582] via-teal-300 to-[#178582] bg-clip-text text-transparent bg-[length:200%_100%]">
-                  TWO MINDS, UNLIMITED CREATIVITY
+                 FOUR MINDS,UNLIMITED CREATIVITY
                 </span>
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-[#178582] animate-expand"></span>
               </span>
@@ -133,7 +133,7 @@ const HeroSection = () => {
               className={`text-xl text-gray-300 max-w-2xl transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${staggerItems[2].delay}ms` }}
             >
-              A two-person studio delivering bespoke design and development solutions that combine creativity with technical excellence.
+              A Four-person studio delivering bespoke design and development solutions that combine creativity with technical excellence.
             </p>
             
             <div 
