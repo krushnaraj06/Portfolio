@@ -110,8 +110,7 @@ const PortfolioPage = () => {
       image: "",
       technologies: ["React", "Node.js", "MySQL",],
       url: "",
-      features: [
-       
+      features: [ 
       ],
       color: "#11C5C6"
     },
