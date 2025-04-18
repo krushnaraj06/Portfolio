@@ -30,6 +30,12 @@ const AboutUsPage = () => {
   // Team members data
   const teamMembers = [
     {
+      name: "Ansh Agarwal",
+      role: "Lead Developer",
+      bio: "Ansh has a passion for clean code and innovative solutions, with expertise inbackend technologies that power modern web applications.",
+      image: anshImage
+    },
+    {
       name: "Krushnaraj Bhosale",
       role: "UI/UX Developer",
       bio: " Krushnaraj brings a unique perspective to every project and has a Expertise in frontend, focusing on creating intuitive and engaging user experiences.",
