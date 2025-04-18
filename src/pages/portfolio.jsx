@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import wadhwaevents from '../assets/wadhwaevents.png';
+import spsImage from '../assets/sps.png';
+import jpImage from '../assets/jp.png';
+import mobikooImage from '../assets/mobikoo.png';
+
 
 const PortfolioPage = () => {
   const [isInView, setIsInView] = useState(false);
@@ -19,7 +23,7 @@ const PortfolioPage = () => {
       description: "A sophisticated web application with advanced features for data visualization and interactive user dashboards.",
       category: "Web Development",
       status: "completed",
-      image: "/api/placeholder/600/400",
+      image: jpImage,
       technologies: ["React", "D3.js", "Firebase", "Material UI"],
       url: "https://jpel2.vercel.app/",
       features: [
@@ -54,7 +58,7 @@ const PortfolioPage = () => {
       description: "An innovative e-commerce platform for mobile accessories with advanced product filtering and a seamless checkout experience.",
       category: "Web Development",
       status: "completed",
-      image: "/api/placeholder/600/400",
+      image: mobikooImage,
       technologies: ["React", "Next.js", "MongoDB", "Stripe"],
       url: "https://mobikoo.com/",
       features: [
@@ -72,7 +76,7 @@ const PortfolioPage = () => {
       description: "A sleek, modern portfolio website showcasing professional services and projects with elegant animations and interactive elements.",
       category: "UI/UX Design",
       status: "completed",
-      image: "/api/placeholder/600/400",
+      image: spsImage,
       technologies: ["React", "Framer Motion", "Tailwind CSS"],
       url: "https://sps-self.vercel.app/",
       features: [
