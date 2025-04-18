@@ -87,6 +87,33 @@ const PortfolioPage = () => {
       ],
       color: "#F7B733"
     },
+    {
+      id: 5,
+      title: "Krish Chemicals",
+      description: "We developing a professional, responsive website for Krish Chemical, a company specializing in high-quality chemical solutions. The goal is to create a clean, modern digital presence that reflects the company’s industrial reliability and product excellence.",
+      category: "Web Development",
+      status: "in-progress",
+      image: "",
+      technologies: ["React", "Node.js", "MongoDB",],
+      url: "",
+      features: [
+       
+      ],
+      color: "#11C5C6"
+    },
+    {
+      id: 6,
+      title: "Prernadip Plastics",
+      description: "We are currently designing and developing a modern, responsive website for Prernadip Plastics Private Limited, a trusted name in plastic manufacturing and solutions. The website is being crafted to reflect the company’s industrial strength, product range, and commitment to quality.",
+      category: "Web Development",
+      status: "in-progress",
+      image: "",
+      technologies: ["React", "Node.js", "MySQL",],
+      url: "",
+      features: [ 
+      ],
+      color: "#11C5C6"
+    },
   ];
   
   // Filter categories
