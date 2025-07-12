@@ -3,6 +3,8 @@ import wadhwaevents from '../assets/wadhwaevents.png';
 import spsImage from '../assets/sps.png';
 import jpImage from '../assets/jp.png';
 import mobikooImage from '../assets/mobikoo.png';
+import krishchem from '../assets/krishchem.jpg';
+import kafila from '../assets/kafila.png';
 
 
 const PortfolioPage = () => {
@@ -92,23 +94,48 @@ const PortfolioPage = () => {
       title: "Krish Chemicals",
       description: "We developing a professional, responsive website for Krish Chemical, a company specializing in high-quality chemical solutions. The goal is to create a clean, modern digital presence that reflects the company’s industrial reliability and product excellence.",
       category: "Web Development",
-      status: "in-progress",
-      image: "",
+      status: "completed",
+      image: krishchem,
       technologies: ["React", "Node.js", "MongoDB",],
-      url: "",
+      url: "https://krishchemusa.com/",
       features: [
-       
+      ],
+      color: "#11C5C6"
+    },
+     {
+      id: 6,
+      title: "Kafila Adventures",
+      description: "",
+      category: "Web Development",
+      status: "completed",
+      image: kafila,
+      technologies: ["React", "Node.js", "MySQL",],
+      url: "https://kafiladventures.com/",
+      features: [ 
       ],
       color: "#11C5C6"
     },
     {
-      id: 6,
+      id: 7,
       title: "Prernadip Plastics",
       description: "We are currently designing and developing a modern, responsive website for Prernadip Plastics Private Limited, a trusted name in plastic manufacturing and solutions. The website is being crafted to reflect the company’s industrial strength, product range, and commitment to quality.",
       category: "Web Development",
       status: "in-progress",
       image: "",
       technologies: ["React", "Node.js", "MySQL",],
+      url: "",
+      features: [ 
+      ],
+      color: "#11C5C6"
+    },
+    {
+      id: 8,
+      title: "JP Spared E-comm",
+      description: "",
+      category: "Web Development",
+      status: "in-progress",
+      image: "",
+      technologies: ["React", "Node.js", "MongoDB",],
       url: "",
       features: [ 
       ],

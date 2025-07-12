@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import animatedImage from '../assets/animated.webp';
 import anshImage from '../assets/ansh.png';
 import krishnaImage from '../assets/krishna.png';
+import dev from '../assets/Dev.png';
 
 const AboutUsPage = () => {
   const [isInView, setIsInView] = useState(false);
@@ -40,6 +41,12 @@ const AboutUsPage = () => {
       role: "UI/UX Developer",
       bio: " Krushnaraj brings a unique perspective to every project and has a Expertise in frontend, focusing on creating intuitive and engaging user experiences.",
       image: krishnaImage
+    },
+     {
+      name: "Dev Sagani",
+      role: "UI/UX Developer",
+      bio: "UI/UX Designer & Frontend Developer crafting seamless, user-centric digital experiences. Passionate about blending design and code to build intuitive, responsive, and impactful interfaces.",
+      image: dev
     },
   ];
   // Detect when section is in view

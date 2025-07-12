@@ -25,7 +25,7 @@ const AnimatedFooter = () => {
   }, []);
   
   // Track mouse position for interactive effects
-  useEffect(() => {
+  useEffect(() => { 
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
       
