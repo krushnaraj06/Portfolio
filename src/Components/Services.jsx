@@ -275,7 +275,7 @@ const ServicesSection = () => {
                 {
                   number: "03",
                   title: "Creation",
-                  description: "Our team brings the strategy to life through expert design and development."
+                  description: "Our three-person team brings the strategy to life through expert design and development."
                 },
                 {
                   number: "04",

@@ -432,7 +432,7 @@ const PortfolioPage = () => {
               <div className="w-full md:w-2/3 mb-8 md:mb-0 md:pr-10">
                 <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">Ready to bring your vision to life?</h3>
                 <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8">
-                  Let's collaborate to create something exceptional together. Our team is ready to transform your ideas into reality.
+                  Let's collaborate to create something exceptional together. Our three-person team is ready to transform your ideas into reality.
                 </p>
                 
                  <a href="/contact"
