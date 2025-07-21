@@ -27,7 +27,7 @@ const PortfolioPage = () => {
       status: "completed",
       image: jpImage,
       technologies: ["React", "D3.js", "Firebase", "Material UI"],
-      url: "https://jpel2.vercel.app/",
+      url: "https://jpel.in/",
       features: [
         "Complex data visualization components",
         "Real-time data updates",
